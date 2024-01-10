@@ -1,21 +1,22 @@
 [package]
-authors = ["Henrik Alsér <henrik.alser@me.com>"]
-name = "ws2812-async"
+authors = ["Henrik Alsér <henrik.alser@me.com>", "Bryan Stitt <bryan@stitthappens.com>"]
+name = "ws2812-embassy"
 version = "0.1.0"
 edition = "2021"
 categories = [
     "embedded",
     "no-std",
     "hardware-support"]
-keywords = ["smart-leds", "ws2812", "async", "embedded-hal-async"]
-description = "Async SPI driver for ws2812 leds"
-documentation = "https://docs.rs/crate/ws2812-async"
+keywords = ["smart-leds", "ws2812", "async", "embedded-hal-async", "embassy"]
+description = "Async SPI driver for ws2812 leds using embassy-futures"
+documentation = "https://docs.rs/crate/ws2812-embassy"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/kalkyl/ws2812-async"
+repository = "https://github.com/WyseNynja/ws2812-embassy"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-smart-leds = "0.3.0"
+embassy-futures = "0.1.1"
 embedded-hal-async = { version = "1.0.0" }
+smart-leds = "0.3.0"
