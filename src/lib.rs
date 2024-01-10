@@ -38,7 +38,7 @@ impl<SPI: SpiBus<u8>, const N: usize> Ws2812<SPI, N> {
     }
 
     #[inline]
-    pub async fn flush(&mut self) -> Result<(), <SPI as ErrorType>::Error> {
+    async fn flush(&mut self) -> Result<(), <SPI as ErrorType>::Error> {
         self.spi.write(&Self::BLANK).await
     }
 }
